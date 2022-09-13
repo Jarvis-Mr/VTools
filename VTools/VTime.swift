@@ -45,6 +45,14 @@ extension String {
         return df.string(from: date)
     }
     
+    /// 当前时间 "04-01"
+    public func formatDate3() -> String {
+        guard let date = toDate3() else {return ""}
+        let df = DateFormatter()
+        df.dateFormat = "MM月dd日"
+        return df.string(from: date)
+    }
+    
     public func formatDate1() -> String {
         guard let date = toDate3() else {return ""}
         let df = DateFormatter()
