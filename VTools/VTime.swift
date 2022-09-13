@@ -37,7 +37,7 @@ extension String {
         formatter.dateFormat = "yyyy-MM-dd HH:mm:ss"
         return formatter.date(from: self)
     }
-    /// 当前时间 "04-01"
+    /// yyyy-MM-dd to MM月dd日
     public func formatDate() -> String {
         guard let date = toDate() else {return ""}
         let df = DateFormatter()
@@ -45,7 +45,7 @@ extension String {
         return df.string(from: date)
     }
     
-    /// 当前时间 "04-01"
+    /// 当前时间 "04-01"  yyyy-MM-dd HH:mm:ss  to MM月dd日
     public func formatDate3() -> String {
         guard let date = toDate3() else {return ""}
         let df = DateFormatter()
@@ -53,10 +53,18 @@ extension String {
         return df.string(from: date)
     }
     
+    ///yyyy-MM-dd HH:mm:ss  to  MM月dd日 HH:mm
     public func formatDate1() -> String {
         guard let date = toDate3() else {return ""}
         let df = DateFormatter()
         df.dateFormat = "MM月dd日 HH:mm"
+        return df.string(from: date)
+    }
+    ///yyyy-MM-dd HH:mm:ss  to 09:30:25
+    public func formatDate2() -> String {
+        guard let date = toDate3() else {return ""}
+        let df = DateFormatter()
+        df.dateFormat = "HH:mm:ss"
         return df.string(from: date)
     }
     
