@@ -1,0 +1,21 @@
+PODS:
+  - Device (3.2.1-b)
+  - VTools (0.1.1)
+
+DEPENDENCIES:
+  - Device (from `../Device`)
+  - VTools (from `../`)
+
+EXTERNAL SOURCES:
+  Device:
+    :path: "../Device"
+  VTools:
+    :path: "../"
+
+SPEC CHECKSUMS:
+  Device: 5bb93c21c4a2b2198a73c8358d27c974daec4d28
+  VTools: 943582b013bba4bb4348a0c6119eda3e9154c75f
+
+PODFILE CHECKSUM: 770721a8a77769149580707776a167851251ee81
+
+COCOAPODS: 1.11.2
